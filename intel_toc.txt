@@ -1,0 +1,960 @@
+opcode toc
+
+AAA,ASCII Adjust After Addition,588
+AAD,ASCII Adjust AX Before Division,590
+AAM,ASCII Adjust AX After Multiply,592
+AAS,ASCII Adjust AL After Subtraction,594
+ADC,Add with Carry,596
+ADCX,Unsigned Integer Addition of Two Operands with Carry Flag,599
+ADD,Add,601
+ADDPD,Add Packed Double-Precision Floating-Point Values,603
+ADDPS,Add Packed Single-Precision Floating-Point Values,606
+ADDSD,Add Scalar Double-Precision Floating-Point Values,609
+ADDSS,Add Scalar Single-Precision Floating-Point Values,611
+ADDSUBPD,Packed Double-FP Add/Subtract,613
+ADDSUBPS,Packed Single-FP Add/Subtract,606
+ADOX,Unsigned Integer Addition of Two Operands with Overflow Flag,618
+AESDEC,Perform One Round of an AES Decryption Flow,620
+AESDECLAST,Perform Last Round of an AES Decryption Flow,622
+AESENC,Perform One Round of an AES Encryption Flow,624
+AESENCLAST,Perform Last Round of an AES Encryption Flow,626
+AESIMC,Perform the AES InvMixColumn Transformation,628
+AESKEYGENASSIST,AES Round Key Generation Assist,629
+AND,Logical AND,631
+ANDN,Logical AND NOT,633
+ANDPD,Bitwise Logical AND of Packed Double Precision Floating-Point Values,634
+ANDPS,Bitwise Logical AND of Packed Single Precision Floating-Point Values,637
+ANDNPD,Bitwise Logical AND NOT of Packed Double Precision Floating-Point Values,640
+ANDNPS,Bitwise Logical AND NOT of Packed Single Precision Floating-Point Values,643
+ARPL,Adjust RPL Field of Segment Selector,646
+BLENDPD,Blend Packed Double Precision Floating-Point Values,648
+BEXTR,Bit Field Extract,650
+BLENDPS,Blend Packed Single Precision Floating-Point Values,651
+BLENDVPD,Variable Blend Packed Double Precision Floating-Point Values,653
+BLENDVPS,Variable Blend Packed Single Precision Floating-Point Values,655
+BLSI,Extract Lowest Set Isolated Bit,658
+BLSMSK,Get Mask Up to Lowest Set Bit,659
+BLSR,Reset Lowest Set Bit,660
+BNDCL,Check Lower Bound,661
+BNDCU,Check Upper Bound,663
+BNDCN,Check Upper Bound,663
+BNDLDX,Load Extended Bounds Using Address Translation,665
+BNDMK,Make Bounds,668
+BNDMOV,Move Bounds,670
+BNDSTX,Store Extended Bounds Using Address Translation,673
+BOUND,Check Array Index Against Bounds,676
+BSF,Bit Scan Forward,678
+BSR,Bit Scan Reverse,680
+BSWAP,Byte Swap,682
+BT,Bit Test,683
+BTC,Bit Test and Complement,685
+BTR,Bit Test and Reset,687
+BTS,Bit Test and Set,689
+BZHI,Zero High Bits Starting with Specified Bit Position,691
+CALL,Call Procedure,693
+CBW,Convert Byte to Word,706
+CWDE,Convert Word to Doubleword,706
+CDQE,Convert Doubleword to Quadword,706
+CLAC,Clear AC Flag in EFLAGS Register,707
+CLC,Clear Carry Flag,708
+CLD,Clear Direction Flag,709
+CLFLUSH,Flush Cache Line,710
+CLFLUSHOPT,Flush Cache Line Optimized,712
+CLI,Clear Interrupt Flag,714
+CLTS,Clear Task-Switched Flag in CR0,716
+CMC,Complement Carry Flag,717
+CMOVcc,Conditional Move,718
+CMP,Compare Two Operands,722
+CMPPD,Compare Packed Double-Precision Floating-Point Values,724
+CMPPS,Compare Packed Single-Precision Floating-Point Values,731
+CMPS,Compare String Operands,738
+CMPSB,Compare String Operands,738
+CMPSW,Compare String Operands,738
+CMPSD,Compare String Operands,738
+CMPSQ,Compare String Operands,738
+CMPSD,Compare Scalar Double-Precision Floating-Point Value,742
+CMPSS,Compare Scalar Single-Precision Floating-Point Value,746
+CMPXCHG,Compare and Exchange,750
+CMPXCHG8B,Compare and Exchange Bytes,752
+CMPXCHG16B,Compare and Exchange Bytes,752
+COMISD,Compare Scalar Ordered Double-Precision Floating-Point Values and Set EFLAGS,755
+COMISS,Compare Scalar Ordered Single-Precision Floating-Point Values and Set EFLAGS,757
+CPUID,CPU Identification,759
+CRC32,Accumulate CRC32 Value,794
+CVTDQ2PD,Convert Packed Doubleword Integers to Packed Double-Precision Floating-Point Values,797
+CVTDQ2PS,Convert Packed Doubleword Integers to Packed Single-Precision Floating-Point Values,801
+CVTPD2DQ,Convert Packed Double-Precision Floating-Point Values to Packed Doubleword Integers,804
+CVTPD2PI,Convert Packed Double-Precision FP Values to Packed Dword Integers,808
+CVTPD2PS,Convert Packed Double-Precision Floating-Point Values to Packed Single-Precision Floating-Point Values,809
+CVTPI2PD,Convert Packed Dword Integers to Packed Double-Precision FP Values,813
+CVTPI2PS,Convert Packed Dword Integers to Packed Single-Precision FP Values,814
+CVTPS2DQ,Convert Packed Single-Precision Floating-Point Values to Packed Signed Doubleword Integer Values,815
+CVTPS2PD,Convert Packed Single-Precision Floating-Point Values to Packed Double-Precision Floating-Point Values,818
+CVTPS2PI,Convert Packed Single-Precision FP Values to Packed Dword Integers,821
+CVTSD2SI,Convert Scalar Double-Precision Floating-Point Value to Doubleword Integer,822
+CVTSD2SS,Convert Scalar Double-Precision Floating-Point Value to Scalar Single-Precision Floating-Point Value,824
+CVTSI2SD,Convert Doubleword Integer to Scalar Double-Precision Floating-Point Value,830
+CVTSI2SS,Convert Doubleword Integer to Scalar Single-Precision Floating-Point Value,828
+CVTSS2SD,Convert Scalar Single-Precision Floating-Point Value to Scalar Double-Precision Floating-Point Value,830
+CVTSS2SI,Convert Scalar Single-Precision Floating-Point Value to Doubleword Integer,832
+CVTTPD2DQ,Convert with Truncation Packed Double-Precision Floating-Point Values to Packed Doubleword Integers,834
+CVTTPD2PI,Convert with Truncation Packed Double-Precision FP Values to Packed Dword Integers,838
+CVTTPS2DQ,Convert with Truncation Packed Single-Precision Floating-Point Values to Packed Signed Doubleword Integer Values,839
+CVTTPS2PI,Convert with Truncation Packed Single-Precision FP Values to Packed Dword Integers,842
+CVTTSD2SI,Convert with Truncation Scalar Double-Precision Floating-Point Value to Signed Integer,843
+CVTTSS2SI,Convert with Truncation Scalar Single-Precision Floating-Point Value to Integer,845
+CWD,Convert Word to Doubleword,847
+CDQ,Convert Doubleword to Quadword,847
+CQO,Convert Doubleword to Quadword,847
+DAA,Decimal Adjust AL after Addition,848
+DAS,Decimal Adjust AL after Subtraction,850
+DEC,Decrement by 1,852
+DIV,Unsigned Divide,854
+DIVPD,Divide Packed Double-Precision Floating-Point Values,857
+DIVPS,Divide Packed Single-Precision Floating-Point Values,860
+DIVSD,Divide Scalar Double-Precision Floating-Point Value,863
+DIVSS,Divide Scalar Single-Precision Floating-Point Values,865
+DPPD,Dot Product of Packed Double Precision Floating-Point Values,867
+DPPS,Dot Product of Packed Single Precision Floating-Point Values,869
+EMMS,Empty MMX Technology State,872
+ENTER,Make Stack Frame for Procedure Parameters,873
+EXTRACTPS,Extract Packed Floating-Point Values,876
+F2XM1,Compute 2x–1,878
+FABS,Absolute Value,880
+FADD,Add,881
+FADDP,Add,881
+FIADD,Add,881
+FBLD,Load Binary Coded Decimal,884
+FBSTP,Store BCD Integer and Pop,886
+FCHS,Change Sign,888
+FCLEX,Clear Exceptions,890
+FNCLEX,Clear Exceptions,890
+FCMOVcc,Floating-Point Conditional Move,892
+FCOM,Compare Floating Point Values,894
+FCOMP,Compare Floating Point Values,894
+FCOMPP,Compare Floating Point Values,894
+FCOMI,Compare Floating Point Values and Set EFLAGS,897
+FCOMIP,Compare Floating Point Values and Set EFLAGS,897
+FUCOMI,Compare Floating Point Values and Set EFLAGS,897
+FUCOMIP,Compare Floating Point Values and Set EFLAGS,897
+FCOS,Cosine,900
+FDECSTP,Decrement Stack-Top Pointer,902
+FDIV,Divide,903
+FDIVP,Divide,903
+FIDIV,Divide,903
+FDIVR,Reverse Divide,906
+FDIVRP,Reverse Divide,906
+FIDIVR,Reverse Divide,906
+FFREE,Free Floating-Point Register,909
+FICOM,Compare Integer,910
+FICOMP,Compare Integer,910
+FILD,Load Integer,912
+FINCSTP,Increment Stack-Top Pointer,914
+FINIT,Initialize Floating-Point Unit,915
+FNINIT,Initialize Floating-Point Unit,915
+FIST,Store Integer,917
+FISTP,Store Integer,917
+FISTTP,Store Integer with Truncation,920
+FLD,Load Floating Point Value,922
+FLD1,Load Constant,924
+FLDL2T,Load Constant,924
+FLDL2E,Load Constant,924
+FLDPI,Load Constant,924
+FLDLG2,Load Constant,924
+FLDLN2,Load Constant,924
+FLDZ,Load Constant,924
+FLDCW,Load x87 FPU Control Word,926
+FLDENV,Load x87 FPU Environment,928
+FMUL,Multiply,930
+FMULP,Multiply,930
+FIMUL,Multiply,930
+FNOP,No Operation,933
+FPATAN,Partial Arctangent,934
+FPREM,Partial Remainder,936
+FPREM1,Partial Remainder,938
+FPTAN,Partial Tangent,940
+FRNDINT,Round to Integer,942
+FRSTOR,Restore x87 FPU State,943
+FSAVE,Store x87 FPU State,945
+FNSAVE,Store x87 FPU State,945
+FSCALE,Scale,948
+FSIN,Sine,950
+FSINCOS,Sine and Cosine,952
+FSQRT,Square Root,954
+FST,Store Floating Point Value,956
+FSTP,Store Floating Point Value,956
+FSTCW,Store x87 FPU Control Word,958
+FNSTCW,Store x87 FPU Control Word,958
+FSTENV,Store x87 FPU Environment,960
+FNSTENV,Store x87 FPU Environment,960
+FSTSW,Store x87 FPU Status Word,962
+FNSTSW,Store x87 FPU Status Word,962
+FSUB,Subtract,964
+FSUBP,Subtract,964
+FISUB,Subtract,964
+FSUBR,Reverse Subtract,967
+FSUBRP,Reverse Subtract,967
+FISUBR,Reverse Subtract,967
+FTST,TEST,970
+FUCOM,Unordered Compare Floating Point Values,972
+FUCOMP,Unordered Compare Floating Point Values,972
+FUCOMPP,Unordered Compare Floating Point Values,972
+FXAM,Examine Floating-Point,975
+FXCH,Exchange Register Contents,977
+FXRSTOR,Restore x87 FPU,MMX,XMM,and MXCSR State,979
+FXSAVE,Save x87 FPU,MMX Technology,and SSE State,982
+FXTRACT,Extract Exponent and Significand,990
+FYL2X,Compute y * log2x,992
+FYL2XP1,Compute y * log2(x +1),994
+HADDPD,Packed Double-FP Horizontal Add,996
+HADDPS,Packed Single-FP Horizontal Add,999
+HLT,Halt,1002
+HSUBPD,Packed Double-FP Horizontal Subtract,1003
+HSUBPS,Packed Single-FP Horizontal Subtract,1006
+IDIV,Signed Divide,1009
+IMUL,Signed Multiply,1012
+IN,Input from Port,1016
+INC,Increment by 1,1018
+INS,Input from Port to String,1020
+INSB,Input from Port to String,1020
+INSW,Input from Port to String,1020
+INSD,Input from Port to String,1020
+INSERTPS,Insert Scalar Single-Precision Floating-Point Value,1023
+INT n,Call to Interrupt Procedure,1026
+INTO,Call to Interrupt Procedure,1026
+INT 3,Call to Interrupt Procedure,1026
+INVD,Invalidate Internal Caches,1038
+INVLPG,Invalidate TLB Entries,1040
+INVPCID,Invalidate Process-Context Identifier,1042
+IRET,Interrupt Return,1045
+IRETD,Interrupt Return,1045
+IRETQ,Interrupt Return,1045
+Jcc,Jump if Condition Is Met,1052
+JMP,Jump,1057
+KADDW,ADD Two Masks,1065
+KADDB,ADD Two Masks,1065
+KADDQ,ADD Two Masks,1065
+KADDD,ADD Two Masks,1065
+KANDW,Bitwise Logical AND Masks,1066
+KANDB,Bitwise Logical AND Masks,1066
+KANDQ,Bitwise Logical AND Masks,1066
+KANDD,Bitwise Logical AND Masks,1066
+KANDNW,Bitwise Logical AND NOT Masks,1067
+KANDNB,Bitwise Logical AND NOT Masks,1067
+KANDNQ,Bitwise Logical AND NOT Masks,1067
+KANDND,Bitwise Logical AND NOT Masks,1067
+KMOVW,Move from and to Mask Registers,1068
+KMOVB,Move from and to Mask Registers,1068
+KMOVQ,Move from and to Mask Registers,1068
+KMOVD,Move from and to Mask Registers,1068
+KNOTW,NOT Mask Register,1070
+KNOTB,NOT Mask Register,1070
+KNOTQ,NOT Mask Register,1070
+KNOTD,NOT Mask Register,1070
+KORW,Bitwise Logical OR Masks,1071
+KORB,Bitwise Logical OR Masks,1071
+KORQ,Bitwise Logical OR Masks,1071
+KORD,Bitwise Logical OR Masks,1071
+KORTESTW,OR Masks And Set Flags,1072
+KORTESTB,OR Masks And Set Flags,1072
+KORTESTQ,OR Masks And Set Flags,1072
+KORTESTD,OR Masks And Set Flags,1072
+KSHIFTLW,Shift Left Mask Registers,1074
+KSHIFTLB,Shift Left Mask Registers,1074
+KSHIFTLQ,Shift Left Mask Registers,1074
+KSHIFTLD,Shift Left Mask Registers,1074
+KSHIFTRW,Shift Right Mask Registers,1076
+KSHIFTRB,Shift Right Mask Registers,1076
+KSHIFTRQ,Shift Right Mask Registers,1076
+KSHIFTRD,Shift Right Mask Registers,1076
+KTESTW,Packed Bit Test Masks and Set Flags,1078
+KTESTB,Packed Bit Test Masks and Set Flags,1078
+KTESTQ,Packed Bit Test Masks and Set Flags,1078
+KTESTD,Packed Bit Test Masks and Set Flags,1078
+KUNPCKBW,Unpack for Mask Registers,1080
+KUNPCKWD,Unpack for Mask Registers,1080
+KUNPCKDQ,Unpack for Mask Registers,1080
+KXNORW,Bitwise Logical XNOR Masks,1081
+KXNORB,Bitwise Logical XNOR Masks,1081
+KXNORQ,Bitwise Logical XNOR Masks,1081
+KXNORD,Bitwise Logical XNOR Masks,1081
+KXORW,Bitwise Logical XOR Masks,1082
+KXORB,Bitwise Logical XOR Masks,1082
+KXORQ,Bitwise Logical XOR Masks,1082
+KXORD,Bitwise Logical XOR Masks,1082
+LAHF,Load Status Flags into AH Register,1083
+LAR,Load Access Rights Byte,1084
+LDDQU,Load Unaligned Integer 128 Bits,1087
+LDMXCSR,Load MXCSR Register,1089
+LDS,Load Far Pointer,1090
+LES,Load Far Pointer,1090
+LFS,Load Far Pointer,1090
+LGS,Load Far Pointer,1090
+LSS,Load Far Pointer,1090
+LEA,Load Effective Address,1094
+LEAVE,High Level Procedure Exit,1096
+LFENCE,Load Fence,1098
+LGDT,Load Global/Interrupt Descriptor Table Register,1099
+LIDT,Load Global/Interrupt Descriptor Table Register,1099
+LLDT,Load Local Descriptor Table Register,1102
+LMSW,Load Machine Status Word,1104
+LOCK,Assert LOCK# Signal Prefix,1106
+LODS,Load String,1108
+LODSB,Load String,1108
+LODSW,Load String,1108
+LODSD,Load String,1108
+LODSQ,Load String,1108
+LOOP,Loop According to ECX Counter,1111
+LOOPcc,Loop According to ECX Counter,1111
+LSL,Load Segment Limit,1113
+LTR,Load Task Register,1116
+LZCNT,Count the Number of Leading Zero Bits,1118
+MASKMOVDQU,Store Selected Bytes of Double Quadword,1128
+MASKMOVQ,Store Selected Bytes of Quadword,1130
+MAXPD,Maximum of Packed Double-Precision Floating-Point Values,1132
+MAXPS,Maximum of Packed Single-Precision Floating-Point Values,1135
+MAXSD,Return Maximum Scalar Double-Precision Floating-Point Value,1138
+MAXSS,Return Maximum Scalar Single-Precision Floating-Point Value,1140
+MFENCE,Memory Fence,1142
+MINPD,Minimum of Packed Double-Precision Floating-Point Values,1143
+MINPS,Minimum of Packed Single-Precision Floating-Point Values,1146
+MINSD,Return Minimum Scalar Double-Precision Floating-Point Value,1149
+MINSS,Return Minimum Scalar Single-Precision Floating-Point Value,1151
+MONITOR,Set Up Monitor Address,1153
+MOV,Move,1155
+MOVAPD,Move Aligned Packed Double-Precision Floating-Point Values,1165
+MOVAPS,Move Aligned Packed Single-Precision Floating-Point Values,1169
+MOVBE,Move Data After Swapping Bytes,1173
+MOVD,Move Doubleword/Move Quadword,1175
+MOVQ,Move Doubleword/Move Quadword,1175
+MOVDDUP,Replicate Double FP Values,1179
+MOVDQA,Move Aligned Packed Integer Values,1182
+VMOVDQA32,Move Aligned Packed Integer Values,1182
+VMOVDQA64,Move Aligned Packed Integer Values,1182
+MOVDQU,Move Unaligned Packed Integer Values,1187
+VMOVDQU8,Move Unaligned Packed Integer Values,1187
+VMOVDQU16,Move Unaligned Packed Integer Values,1187
+VMOVDQU32,Move Unaligned Packed Integer Values,1187
+VMOVDQU64,Move Unaligned Packed Integer Values,1187
+MOVDQ2Q,Move Quadword from XMM to MMX Technology Register,1195
+MOVHLPS,Move Packed Single-Precision Floating-Point Values High to Low,1196
+MOVHPD,Move High Packed Double-Precision Floating-Point Value,1198
+MOVHPS,Move High Packed Single-Precision Floating-Point Values,1200
+MOVLHPS,Move Packed Single-Precision Floating-Point Values Low to High,1202
+MOVLPD,Move Low Packed Double-Precision Floating-Point Value,1204
+MOVLPS,Move Low Packed Single-Precision Floating-Point Values,1206
+MOVMSKPD,Extract Packed Double-Precision Floating-Point Sign Mask,1208
+MOVMSKPS,Extract Packed Single-Precision Floating-Point Sign Mask,1210
+MOVNTDQA,Load Double Quadword Non-Temporal Aligned Hint,1212
+MOVNTDQ,Store Packed Integers Using Non-Temporal Hint,1214
+MOVNTI,Store Doubleword Using Non-Temporal Hint,1216
+MOVNTPD,Store Packed Double-Precision Floating-Point Values Using Non-Temporal Hint,1218
+MOVNTPS,Store Packed Single-Precision Floating-Point Values Using Non-Temporal Hint,1220
+MOVNTQ,Store of Quadword Using Non-Temporal Hint,1222
+MOVQ,Move Quadword,1223
+MOVQ2DQ,Move Quadword from MMX Technology to XMM Register,1226
+MOVS,Move Data from String to String,1227
+MOVSB,Move Data from String to String,1227
+MOVSW,Move Data from String to String,1227
+MOVSD,Move Data from String to String,1227
+MOVSQ,Move Data from String to String,1227
+MOVSD,Move or Merge Scalar Double-Precision Floating-Point Value,1231
+MOVSHDUP,Replicate Single FP Values,1234
+MOVSLDUP,Replicate Single FP Values,1237
+MOVSS,Move or Merge Scalar Single-Precision Floating-Point Value,1240
+MOVSX,Move with Sign-Extension,1244
+MOVSXD,Move with Sign-Extension,1244
+MOVUPD,Move Unaligned Packed Double-Precision Floating-Point Values,1246
+MOVUPS,Move Unaligned Packed Single-Precision Floating-Point Values,1250
+MOVZX,Move with Zero-Extend,1254
+MPSADBW,Compute Multiple Packed Sums of Absolute Difference,1256
+MUL,Unsigned Multiply,1264
+MULPD,Multiply Packed Double-Precision Floating-Point Values,1266
+MULPS,Multiply Packed Single-Precision Floating-Point Values,1269
+MULSD,Multiply Scalar Double-Precision Floating-Point Value,1272
+MULSS,Multiply Scalar Single-Precision Floating-Point Values,1274
+MULX,Unsigned Multiply Without Affecting Flags,1276
+MWAIT,Monitor Wait,1278
+NEG,Two's Complement Negation,1281
+NOP,No Operation,1283
+NOT,One's Complement Negation,1284
+OR,Logical Inclusive OR,1286
+ORPD,Bitwise Logical OR of Packed Double Precision Floating-Point Values,1288
+ORPS,Bitwise Logical OR of Packed Single Precision Floating-Point Values,1291
+OUT,Output to Port,1294
+OUTS,Output String to Port,1296
+OUTSB,Output String to Port,1296
+OUTSW,Output String to Port,1296
+OUTSD,Output String to Port,1296
+PABSB,Packed Absolute Value,1300
+PABSW,Packed Absolute Value,1300
+PABSD,Packed Absolute Value,1300
+PABSQ,Packed Absolute Value,1300
+PACKSSWB,Pack with Signed Saturation,1306
+PACKSSDW,Pack with Signed Saturation,1306
+PACKUSDW,Pack with Unsigned Saturation,1314
+PACKUSWB,Pack with Unsigned Saturation,1319
+PADDB,Add Packed Integers,1324
+PADDW,Add Packed Integers,1324
+PADDD,Add Packed Integers,1324
+PADDQ,Add Packed Integers,1324
+PADDSB,Add Packed Signed Integers with Signed Saturation,1331
+PADDSW,Add Packed Signed Integers with Signed Saturation,1331
+PADDUSB,Add Packed Unsigned Integers with Unsigned Saturation,1335
+PADDUSW,Add Packed Unsigned Integers with Unsigned Saturation,1335
+PALIGNR,Packed Align Right,1339
+PAND,Logical AND,1343
+PANDN,Logical AND NOT,1346
+PAUSE,Spin Loop Hint,1349
+PAVGB,Average Packed Integers,1350
+PAVGW,Average Packed Integers,1350
+PBLENDVB,Variable Blend Packed Bytes,1354
+PBLENDW,Blend Packed Words,1358
+PCLMULQDQ,Carry-Less Multiplication Quadword,1361
+PCMPEQB,Compare Packed Data for Equal,1364
+PCMPEQW,Compare Packed Data for Equal,1364
+PCMPEQD,Compare Packed Data for Equal,1364
+PCMPEQQ,Compare Packed Qword Data for Equal,1370
+PCMPESTRI,Packed Compare Explicit Length Strings,Return Index,1373
+PCMPESTRM,Packed Compare Explicit Length Strings,Return Mask,1375
+PCMPGTB,Compare Packed Signed Integers for Greater Than,1377
+PCMPGTW,Compare Packed Signed Integers for Greater Than,1377
+PCMPGTD,Compare Packed Signed Integers for Greater Than,1377
+PCMPGTQ,Compare Packed Data for Greater Than,1383
+PCMPISTRI,Packed Compare Implicit Length Strings,Return Index,1386
+PCMPISTRM,Packed Compare Implicit Length Strings,Return Mask,1388
+PDEP,Parallel Bits Deposit,1390
+PEXT,Parallel Bits Extract,1392
+PEXTRB,Extract Byte/Dword/Qword,1394
+PEXTRD,Extract Byte/Dword/Qword,1394
+PEXTRQ,Extract Byte/Dword/Qword,1394
+PEXTRW,Extract Word,1397
+PHADDW,Packed Horizontal Add,1400
+PHADDD,Packed Horizontal Add,1400
+PHADDSW,Packed Horizontal Add and Saturate,1404
+PHMINPOSUW,Packed Horizontal Word Minimum,1406
+PHSUBW,Packed Horizontal Subtract,1408
+PHSUBD,Packed Horizontal Subtract,1408
+PHSUBSW,Packed Horizontal Subtract and Saturate,1411
+PINSRB,Insert Byte/Dword/Qword,1413
+PINSRD,Insert Byte/Dword/Qword,1413
+PINSRQ,Insert Byte/Dword/Qword,1413
+PINSRW,Insert Word,1416
+PMADDUBSW,Multiply and Add Packed Signed and Unsigned Bytes,1418
+PMADDWD,Multiply and Add Packed Integers,1421
+PMAXSB,Maximum of Packed Signed Integers,1424
+PMAXSW,Maximum of Packed Signed Integers,1424
+PMAXSD,Maximum of Packed Signed Integers,1424
+PMAXSQ,Maximum of Packed Signed Integers,1424
+PMAXUB,Maximum of Packed Unsigned Integers,1431
+PMAXUW,Maximum of Packed Unsigned Integers,1431
+PMAXUD,Maximum of Packed Unsigned Integers,1436
+PMAXUQ,Maximum of Packed Unsigned Integers,1436
+PMINSB,Minimum of Packed Signed Integers,1440
+PMINSW,Minimum of Packed Signed Integers,1440
+PMINSD,Minimum of Packed Signed Integers,1445
+PMINSQ,Minimum of Packed Signed Integers,1445
+PMINUB,Minimum of Packed Unsigned Integers,1449
+PMINUW,Minimum of Packed Unsigned Integers,1449
+PMINUD,Minimum of Packed Unsigned Integers,1454
+PMINUQ,Minimum of Packed Unsigned Integers,1454
+PMOVMSKB,Move Byte Mask,1458
+PMOVSX,Packed Move with Sign Extend,1460
+PMOVZX,Packed Move with Zero Extend,1470
+PMULDQ,Multiply Packed Doubleword Integers,1479
+PMULHRSW,Packed Multiply High with Round and Scale,1482
+PMULHUW,Multiply Packed Unsigned Integers and Store High Result,1486
+PMULHW,Multiply Packed Signed Integers and Store High Result,1490
+PMULLD,Multiply Packed Integers and Store Low Result,1494
+PMULLQ,Multiply Packed Integers and Store Low Result,1494
+PMULLW,Multiply Packed Signed Integers and Store Low Result,1498
+PMULUDQ,Multiply Packed Unsigned Doubleword Integers,1502
+POP,Pop a Value from the Stack,1505
+POPA,Pop All General-Purpose Registers,1510
+POPAD,Pop All General-Purpose Registers,1510
+POPCNT,Return the Count of Number of Bits Set to 1,1512
+POPF,Pop Stack into EFLAGS Register,1514
+POPFD,Pop Stack into EFLAGS Register,1514
+POPFQ,Pop Stack into EFLAGS Register,1514
+POR,Bitwise Logical OR,1519
+PREFETCHh,Prefetch Data Into Caches,1522
+PREFETCHW,Prefetch Data into Caches in Anticipation of a Write,1524
+PREFETCHWT1,Prefetch Vector Data Into Caches with Intent to Write and T1 Hint,1526
+PSADBW,Compute Sum of Absolute Differences,1528
+PSHUFB,Packed Shuffle Bytes,1532
+PSHUFD,Shuffle Packed Doublewords,1536
+PSHUFHW,Shuffle Packed High Words,1540
+PSHUFLW,Shuffle Packed Low Words,1543
+PSHUFW,Shuffle Packed Words,1546
+PSIGNB,Packed SIGN,1547
+PSIGNW,Packed SIGN,1547
+PSIGND,Packed SIGN,1547
+PSLLDQ,Shift Double Quadword Left Logical,1551
+PSLLW,Shift Packed Data Left Logical,1553
+PSLLD,Shift Packed Data Left Logical,1553
+PSLLQ,Shift Packed Data Left Logical,1553
+PSRAW,Shift Packed Data Right Arithmetic,1565
+PSRAD,Shift Packed Data Right Arithmetic,1565
+PSRAQ,Shift Packed Data Right Arithmetic,1565
+PSRLDQ,Shift Double Quadword Right Logical,1575
+PSRLW,Shift Packed Data Right Logical,1577
+PSRLD,Shift Packed Data Right Logical,1577
+PSRLQ,Shift Packed Data Right Logical,1577
+PSUBB,Subtract Packed Integers,1589
+PSUBW,Subtract Packed Integers,1589
+PSUBD,Subtract Packed Integers,1589
+PSUBQ,Subtract Packed Quadword Integers,1596
+PSUBSB,Subtract Packed Signed Integers with Signed Saturation,1599
+PSUBSW,Subtract Packed Signed Integers with Signed Saturation,1599
+PSUBUSB,Subtract Packed Unsigned Integers with Unsigned Saturation,1603
+PSUBUSW,Subtract Packed Unsigned Integers with Unsigned Saturation,1603
+PTEST,Logical Compare,1607
+PTWRITE,Write Data to a Processor Trace Packet,1609
+PUNPCKHBW,Unpack High Data,1611
+PUNPCKHWD,Unpack High Data,1611
+PUNPCKHDQ,Unpack High Data,1611
+PUNPCKHQDQ,Unpack High Data,1611
+PUNPCKLBW,Unpack Low Data,1621
+PUNPCKLWD,Unpack Low Data,1621
+PUNPCKLDQ,Unpack Low Data,1621
+PUNPCKLQDQ,Unpack Low Data,1621
+PUSH,Push Word Doubleword or Quadword Onto the Stack,1631
+PUSHA,Push All General-Purpose Registers,1634
+PUSHAD,Push All General-Purpose Registers,1634
+PUSHF,Push EFLAGS Register onto the Stack,1636
+PUSHFD,Push EFLAGS Register onto the Stack,1636
+PXOR,Logical Exclusive OR,1638
+RCL,Rotate,1641
+RCR,Rotate,1641
+ROL,Rotate,1641
+ROR,Rotate,1641
+RCPPS,Compute Reciprocals of Packed Single-Precision Floating-Point Values,1646
+RCPSS,Compute Reciprocal of Scalar Single-Precision Floating-Point Values,1648
+RDFSBASE,Read FS/GS Segment Base,1650
+RDGSBASE,Read FS/GS Segment Base,1650
+RDMSR,Read from Model Specific Register,1652
+RDPID,Read Processor ID,1654
+RDPKRU,Read Protection Key Rights for User Pages,1655
+RDPMC,Read Performance-Monitoring Counters,1657
+RDRAND,Read Random Number,1661
+RDSEED,Read Random SEED,1663
+RDTSC,Read Time-Stamp Counter,1665
+RDTSCP,Read Time-Stamp Counter and Processor ID,1667
+REP,Repeat String Operation Prefix,1669
+REPE,Repeat String Operation Prefix,1669
+REPZ,Repeat String Operation Prefix,1669
+REPNE,Repeat String Operation Prefix,1669
+REPNZ,Repeat String Operation Prefix,1669
+RET,Return from Procedure,1673
+RORX,Rotate Right Logical Without Affecting Flags,1683
+ROUNDPD,Round Packed Double Precision Floating-Point Values,1684
+ROUNDPS,Round Packed Single Precision Floating-Point Values,1687
+ROUNDSD,Round Scalar Double Precision Floating-Point Values,1690
+ROUNDSS,Round Scalar Single Precision Floating-Point Values,1692
+RSM,Resume from System Management Mode,1694
+RSQRTPS,Compute Reciprocals of Square Roots of Packed Single-Precision Floating-Point Values,1696
+RSQRTSS,Compute Reciprocal of Square Root of Scalar Single-Precision Floating-Point Value,1698
+SAHF,Store AH into Flags,1700
+SAL,Shift,1702
+SAR,Shift,1702
+SHL,Shift,1702
+SHR,Shift,1702
+SARX,Shift Without Affecting Flags,1707
+SHLX,Shift Without Affecting Flags,1707
+SHRX,Shift Without Affecting Flags,1707
+SBB,Integer Subtraction with Borrow,1709
+SCAS,Scan String,1712
+SCASB,Scan String,1712
+SCASW,Scan String,1712
+SCASD,Scan String,1712
+SETcc,Set Byte on Condition,1716
+SFENCE,Store Fence,1719
+SGDT,Store Global Descriptor Table Register,1720
+SHA1RNDS4,Perform Four Rounds of SHA1 Operation,1722
+SHA1NEXTE,Calculate SHA1 State Variable E after Four Rounds,1724
+SHA1MSG1,Perform an Intermediate Calculation for the Next Four SHA1 Message Dwords,1725
+SHA1MSG2,Perform a Final Calculation for the Next Four SHA1 Message Dwords,1726
+SHA256RNDS2,Perform Two Rounds of SHA256 Operation,1727
+SHA256MSG1,Perform an Intermediate Calculation for the Next Four SHA256 Message Dwords,1729
+SHA256MSG2,Perform a Final Calculation for the Next Four SHA256 Message Dwords,1726
+SHLD,Double Precision Shift Left,1731
+SHRD,Double Precision Shift Right,1734
+SHUFPD,Packed Interleave Shuffle of Pairs of Double-Precision Floating-Point Values,1737
+SHUFPS,Packed Interleave Shuffle of Quadruplets of Single-Precision Floating-Point Values,1742
+SIDT,Store Interrupt Descriptor Table Register,1746
+SLDT,Store Local Descriptor Table Register,1748
+SMSW,Store Machine Status Word,1750
+SQRTPD,Square Root of Double-Precision Floating-Point Values,1752
+SQRTPS,Square Root of Single-Precision Floating-Point Values,1755
+SQRTSD,Compute Square Root of Scalar Double-Precision Floating-Point Value,1758
+SQRTSS,Compute Square Root of Scalar Single-Precision Value,1760
+STAC,Set AC Flag in EFLAGS Register,1762
+STC,Set Carry Flag,1763
+STD,Set Direction Flag,1764
+STI,Set Interrupt Flag,1765
+STMXCSR,Store MXCSR Register State,1767
+STOS,Store String,1768
+STOSB,Store String,1768
+STOSW,Store String,1768
+STOSD,Store String,1768
+STOSQ,Store String,1768
+STR,Store Task Register,1772
+SUB,Subtract,1774
+SUBPD,Subtract Packed Double-Precision Floating-Point Values,1776
+SUBPS,Subtract Packed Single-Precision Floating-Point Values,1779
+SUBSD,Subtract Scalar Double-Precision Floating-Point Value,1782
+SUBSS,Subtract Scalar Single-Precision Floating-Point Value,1784
+SWAPGS,Swap GS Base Register,1786
+SYSCALL,Fast System Call,1788
+SYSENTER,Fast System Call,1790
+SYSEXIT,Fast Return from Fast System Call,1793
+SYSRET,Return From Fast System Call,1796
+TEST,Logical Compare,1799
+TZCNT,Count the Number of Trailing Zero Bits,1801
+UCOMISD,Unordered Compare Scalar Double-Precision Floating-Point Values and Set EFLAGS,1803
+UCOMISS,Unordered Compare Scalar Single-Precision Floating-Point Values and Set EFLAGS,1805
+UD2,Undefined Instruction,1807
+UNPCKHPD,Unpack and Interleave High Packed Double-Precision Floating-Point Values,1808
+UNPCKHPS,Unpack and Interleave High Packed Single-Precision Floating-Point Values,1812
+UNPCKLPD,Unpack and Interleave Low Packed Double-Precision Floating-Point Values,1816
+UNPCKLPS,Unpack and Interleave Low Packed Single-Precision Floating-Point Values,1820
+VALIGND,Align Doubleword/Quadword Vectors,1829
+VALIGNQ,Align Doubleword/Quadword Vectors,1829
+VBLENDMPD,Blend Float64/Float32 Vectors Using an OpMask Control,1832
+VBLENDMPS,Blend Float64/Float32 Vectors Using an OpMask Control,1832
+VBROADCAST,Load with Broadcast Floating-Point Data,1834
+VPBROADCASTM,Broadcast Mask to Vector Register,1841
+VCOMPRESSPD,Store Sparse Packed Double-Precision Floating-Point Values into Dense Memory,1843
+VCOMPRESSPS,Store Sparse Packed Single-Precision Floating-Point Values into Dense Memory,1845
+VCVTPD2QQ,Convert Packed Double-Precision Floating-Point Values to Packed Quadword Integers,1847
+VCVTPD2UDQ,Convert Packed Double-Precision Floating-Point Values to Packed Unsigned Doubleword Integers,1849
+VCVTPD2UQQ,Convert Packed Double-Precision Floating-Point Values to Packed Unsigned Quadword Integers,1851
+VCVTPH2PS,Convert 16-bit FP values to Single-Precision FP values,1853
+VCVTPS2PH,Convert Single-Precision FP value to 16-bit FP value,1856
+VCVTPS2UDQ,Convert Packed Single-Precision Floating-Point Values to Packed Unsigned Doubleword Integer Values,1860
+VCVTPS2QQ,Convert Packed Single Precision Floating-Point Values to Packed Singed Quadword Integer Values,1862
+VCVTPS2UQQ,Convert Packed Single Precision Floating-Point Values to Packed Unsigned Quadword Integer Values,1864
+VCVTQQ2PD,Convert Packed Quadword Integers to Packed Double-Precision Floating-Point Values,1866
+VCVTQQ2PS,Convert Packed Quadword Integers to Packed Single-Precision Floating-Point Values,1868
+VCVTSD2USI,Convert Scalar Double-Precision Floating-Point Value to Unsigned Doubleword Integer,1870
+VCVTSS2USI,Convert Scalar Single-Precision Floating-Point Value to Unsigned Doubleword Integer,1872
+VCVTTPD2QQ,Convert with Truncation Packed Double-Precision Floating-Point Values to Packed Quadword Integers,1874
+VCVTTPD2UDQ,Convert with Truncation Packed Double-Precision Floating-Point Values to Packed Unsigned Doubleword Integers,1876
+VCVTTPD2UQQ,Convert with Truncation Packed Double-Precision Floating-Point Values to Packed Unsigned Quadword Integers,1878
+VCVTTPS2UDQ,Convert with Truncation Packed Single-Precision Floating-Point Values to Packed Unsigned Doubleword Integer Values,1880
+VCVTTPS2QQ,Convert with Truncation Packed Single Precision Floating-Point Values to Packed Singed Quadword Integer Values,1882
+VCVTTPS2UQQ,Convert with Truncation Packed Single Precision Floating-Point Values to Packed Unsigned Quadword Integer Values,1884
+VCVTTSD2USI,Convert with Truncation Scalar Double-Precision Floating-Point Value to Unsigned Integer,1886
+VCVTTSS2USI,Convert with Truncation Scalar Single-Precision Floating-Point Value to Unsigned Integer,1887
+VCVTUDQ2PD,Convert Packed Unsigned Doubleword Integers to Packed Double-Precision Floating-Point Values,1889
+VCVTUDQ2PS,Convert Packed Unsigned Doubleword Integers to Packed Single-Precision Floating-Point Values,1891
+VCVTUQQ2PD,Convert Packed Unsigned Quadword Integers to Packed Double-Precision Floating-Point Values,1893
+VCVTUQQ2PS,Convert Packed Unsigned Quadword Integers to Packed Single-Precision Floating-Point Values,1895
+VCVTUSI2SD,Convert Unsigned Integer to Scalar Double-Precision Floating-Point Value,1897
+VCVTUSI2SS,Convert Unsigned Integer to Scalar Single-Precision Floating-Point Value,1899
+VDBPSADBW,Double Block Packed Sum-Absolute-Differences (SAD) on Unsigned Bytes,1901
+VEXPANDPD,Load Sparse Packed Double-Precision Floating-Point Values from Dense Memory,1904
+VEXPANDPS,Load Sparse Packed Single-Precision Floating-Point Values from Dense Memory,1906
+VERR,Verify a Segment for Reading or Writing,1908
+VERW,Verify a Segment for Reading or Writing,1908
+VEXP2PD,Approximation to the Exponential 2^x of Packed Double-Precision Floating-Point Values with Less Than 2^-23 Relative Error,1910
+VEXP2PS,Approximation to the Exponential 2^x of Packed Single-Precision Floating-Point Values with Less Than 2^-23 Relative Error,1912
+VEXTRACTF128,Extract Packed Floating-Point Values,1914
+VEXTRACTF32x4,Extract Packed Floating-Point Values,1914
+VEXTRACTF64x2,Extract Packed Floating-Point Values,1914
+VEXTRACTF32x8,Extract Packed Floating-Point Values,1914
+VEXTRACTF64x4,Extract Packed Floating-Point Values,1914
+VEXTRACTI128,Extract packed Integer Values,1920
+VEXTRACTI32x4,Extract packed Integer Values,1920
+VEXTRACTI64x2,Extract packed Integer Values,1920
+VEXTRACTI32x8,Extract packed Integer Values,1920
+VEXTRACTI64x4,Extract packed Integer Values,1920
+VFIXUPIMMPD,Fix Up Special Packed Float64 Values,1926
+VFIXUPIMMPS,Fix Up Special Packed Float32 Values,1930
+VFIXUPIMMSD,Fix Up Special Scalar Float64 Value,1934
+VFIXUPIMMSS,Fix Up Special Scalar Float32 Value,1937
+VFMADD132PD,Fused Multiply-Add of Packed Double-Precision Floating-Point Values,1940
+VFMADD213PD,Fused Multiply-Add of Packed Double-Precision Floating-Point Values,1940
+VFMADD231PD,Fused Multiply-Add of Packed Double-Precision Floating-Point Values,1940
+VFMADD132PS,Fused Multiply-Add of Packed Single-Precision Floating-Point Values,1947
+VFMADD213PS,Fused Multiply-Add of Packed Single-Precision Floating-Point Values,1947
+VFMADD231PS,Fused Multiply-Add of Packed Single-Precision Floating-Point Values,1947
+VFMADD132SD,Fused Multiply-Add of Scalar Double-Precision Floating-Point Values,1953
+VFMADD213SD,Fused Multiply-Add of Scalar Double-Precision Floating-Point Values,1953
+VFMADD231SD,Fused Multiply-Add of Scalar Double-Precision Floating-Point Values,1953
+VFMADD132SS,Fused Multiply-Add of Scalar Single-Precision Floating-Point Values,1956
+VFMADD213SS,Fused Multiply-Add of Scalar Single-Precision Floating-Point Values,1956
+VFMADD231SS,Fused Multiply-Add of Scalar Single-Precision Floating-Point Values,1956
+VFMADDSUB132PD,Fused Multiply-Alternating Add/Subtract of Packed Double-Precision Floating-Point Values,1959
+VFMADDSUB213PD,Fused Multiply-Alternating Add/Subtract of Packed Double-Precision Floating-Point Values,1959
+VFMADDSUB231PD,Fused Multiply-Alternating Add/Subtract of Packed Double-Precision Floating-Point Values,1959
+VFMADDSUB132PS,Fused Multiply-Alternating Add/Subtract of Packed Single-Precision Floating-Point Values,1966
+VFMADDSUB213PS,Fused Multiply-Alternating Add/Subtract of Packed Single-Precision Floating-Point Values,1966
+VFMADDSUB231PS,Fused Multiply-Alternating Add/Subtract of Packed Single-Precision Floating-Point Values,1966
+VFMSUBADD132PD,Fused Multiply-Alternating Subtract/Add of Packed Double-Precision Floating-Point Values,1973
+VFMSUBADD213PD,Fused Multiply-Alternating Subtract/Add of Packed Double-Precision Floating-Point Values,1973
+VFMSUBADD231PD,Fused Multiply-Alternating Subtract/Add of Packed Double-Precision Floating-Point Values,1973
+VFMSUBADD132PS,Fused Multiply-Alternating Subtract/Add of Packed Single-Precision Floating-Point Values,1980
+VFMSUBADD213PS,Fused Multiply-Alternating Subtract/Add of Packed Single-Precision Floating-Point Values,1980
+VFMSUBADD231PS,Fused Multiply-Alternating Subtract/Add of Packed Single-Precision Floating-Point Values,1980
+VFMSUB132PD,Fused Multiply-Subtract of Packed Double-Precision Floating-Point Values,1987
+VFMSUB213PD,Fused Multiply-Subtract of Packed Double-Precision Floating-Point Values,1987
+VFMSUB231PD,Fused Multiply-Subtract of Packed Double-Precision Floating-Point Values,1987
+VFMSUB132PS,Fused Multiply-Subtract of Packed Single-Precision Floating-Point Values,1993
+VFMSUB213PS,Fused Multiply-Subtract of Packed Single-Precision Floating-Point Values,1993
+VFMSUB231PS,Fused Multiply-Subtract of Packed Single-Precision Floating-Point Values,1993
+VFMSUB132SD,Fused Multiply-Subtract of Scalar Double-Precision Floating-Point Values,1999
+VFMSUB213SD,Fused Multiply-Subtract of Scalar Double-Precision Floating-Point Values,1999
+VFMSUB231SD,Fused Multiply-Subtract of Scalar Double-Precision Floating-Point Values,1999
+VFMSUB132SS,Fused Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2002
+VFMSUB213SS,Fused Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2002
+VFMSUB231SS,Fused Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2002
+VFNMADD132PD,Fused Negative Multiply-Add of Packed Double-Precision Floating-Point Values,2005
+VFNMADD213PD,Fused Negative Multiply-Add of Packed Double-Precision Floating-Point Values,2005
+VFNMADD231PD,Fused Negative Multiply-Add of Packed Double-Precision Floating-Point Values,2005
+VFNMADD132PS,Fused Negative Multiply-Add of Packed Single-Precision Floating-Point Values,2012
+VFNMADD213PS,Fused Negative Multiply-Add of Packed Single-Precision Floating-Point Values,2012
+VFNMADD231PS,Fused Negative Multiply-Add of Packed Single-Precision Floating-Point Values,2012
+VFNMADD132SD,Fused Negative Multiply-Add of Scalar Double-Precision Floating-Point Values,2018
+VFNMADD213SD,Fused Negative Multiply-Add of Scalar Double-Precision Floating-Point Values,2018
+VFNMADD231SD,Fused Negative Multiply-Add of Scalar Double-Precision Floating-Point Values,2018
+VFNMADD132SS,Fused Negative Multiply-Add of Scalar Single-Precision Floating-Point Values,2021
+VFNMADD213SS,Fused Negative Multiply-Add of Scalar Single-Precision Floating-Point Values,2021
+VFNMADD231SS,Fused Negative Multiply-Add of Scalar Single-Precision Floating-Point Values,2021
+VFNMSUB132PD,Fused Negative Multiply-Subtract of Packed Double-Precision Floating-Point Values,2024
+VFNMSUB213PD,Fused Negative Multiply-Subtract of Packed Double-Precision Floating-Point Values,2024
+VFNMSUB231PD,Fused Negative Multiply-Subtract of Packed Double-Precision Floating-Point Values,2024
+VFNMSUB132PS,Fused Negative Multiply-Subtract of Packed Single-Precision Floating-Point Values,2030
+VFNMSUB213PS,Fused Negative Multiply-Subtract of Packed Single-Precision Floating-Point Values,2030
+VFNMSUB231PS,Fused Negative Multiply-Subtract of Packed Single-Precision Floating-Point Values,2030
+VFNMSUB132SD,Fused Negative Multiply-Subtract of Scalar Double-Precision Floating-Point Values,2036
+VFNMSUB213SD,Fused Negative Multiply-Subtract of Scalar Double-Precision Floating-Point Values,2036
+VFNMSUB231SD,Fused Negative Multiply-Subtract of Scalar Double-Precision Floating-Point Values,2036
+VFNMSUB132SS,Fused Negative Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2039
+VFNMSUB213SS,Fused Negative Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2039
+VFNMSUB231SS,Fused Negative Multiply-Subtract of Scalar Single-Precision Floating-Point Values,2039
+VFPCLASSPD,Tests Types Of a Packed Float64 Values,2042
+VFPCLASSPS,Tests Types Of a Packed Float32 Values,2045
+VFPCLASSSD,Tests Types Of a Scalar Float64 Values,2047
+VFPCLASSSS,Tests Types Of a Scalar Float32 Values,2049
+VGATHERDPD,Gather Packed DP FP Values Using Signed Dword/Qword Indices,2051
+VGATHERQPD,Gather Packed DP FP Values Using Signed Dword/Qword Indices,2051
+VGATHERDPS,Gather Packed SP FP values Using Signed Dword/Qword Indices,2055
+VGATHERQPS,Gather Packed SP FP values Using Signed Dword/Qword Indices,2055
+VGATHERDPS,Gather Packed Single,Packed Double with Signed Dword,2059
+VGATHERDPD,Gather Packed Single,Packed Double with Signed Dword,2059
+VGATHERPF0DPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T0 Hint,2062
+VGATHERPF0QPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T0 Hint,2062
+VGATHERPF0DPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T0 Hint,2062
+VGATHERPF0QPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T0 Hint,2062
+VGATHERPF1DPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T1 Hint,2064
+VGATHERPF1QPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T1 Hint,2064
+VGATHERPF1DPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T1 Hint,2064
+VGATHERPF1QPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword,Signed Qword Indices Using T1 Hint,2064
+VGATHERQPS,Gather Packed Single,Packed Double with Signed Qword Indices,2066
+VGATHERQPD,Gather Packed Single,Packed Double with Signed Qword Indices,2066
+VPGATHERDD,Gather Packed Dword Values Using Signed Dword/Qword Indices,2069
+VPGATHERQD,Gather Packed Dword Values Using Signed Dword/Qword Indices,2069
+VPGATHERDD,Gather Packed Dword,Packed Qword with Signed Dword Indices,2073
+VPGATHERDQ,Gather Packed Dword,Packed Qword with Signed Dword Indices,2073
+VPGATHERDQ,Gather Packed Qword Values Using Signed Dword/Qword Indices,2076
+VPGATHERQQ,Gather Packed Qword Values Using Signed Dword/Qword Indices,2076
+VPGATHERQD,Gather Packed Dword,Packed Qword with Signed Qword Indices,2080
+VPGATHERQQ,Gather Packed Dword,Packed Qword with Signed Qword Indices,2080
+VGETEXPPD,Convert Exponents of Packed DP FP Values to DP FP Values,2083
+VGETEXPPS,Convert Exponents of Packed SP FP Values to SP FP Values,2086
+VGETEXPSD,Convert Exponents of Scalar DP FP Values to DP FP Value,2090
+VGETEXPSS,Convert Exponents of Scalar SP FP Values to SP FP Value,2092
+VGETMANTPD,Extract Float64 Vector of Normalized Mantissas from Float64 Vector,2094
+VGETMANTPS,Extract Float32 Vector of Normalized Mantissas from Float32 Vector,2098
+VGETMANTSD,Extract Float64 of Normalized Mantissas from Float64 Scalar,2101
+VGETMANTSS,Extract Float32 Vector of Normalized Mantissa from Float32 Vector,2103
+VINSERTF128,Insert Packed Floating-Point Values,2105
+VINSERTF32x4,Insert Packed Floating-Point Values,2105
+VINSERTF64x2,Insert Packed Floating-Point Values,2105
+VINSERTF32x8,Insert Packed Floating-Point Values,2105
+VINSERTF64x4,Insert Packed Floating-Point Values,2105
+VINSERTI128,Insert Packed Integer Values,2109
+VINSERTI32x4,Insert Packed Integer Values,2109
+VINSERTI64x2,Insert Packed Integer Values,2109
+VINSERTI32x8,Insert Packed Integer Values,2109
+VINSERTI64x4,Insert Packed Integer Values,2109
+VMASKMOV,Conditional SIMD Packed Loads and Stores,2113
+VPBLENDD,Blend Packed Dwords,2116
+VPBLENDMB,Blend Byte/Word Vectors Using an Opmask Control,2118
+VPBLENDMW,Blend Byte/Word Vectors Using an Opmask Control,2118
+VPBLENDMD,Blend Int32/Int64 Vectors Using an OpMask Control,2120
+VPBLENDMQ,Blend Int32/Int64 Vectors Using an OpMask Control,2120
+VPBROADCASTB,Load with Broadcast Integer Data from General Purpose Register,2122
+VPBROADCASTW,Load with Broadcast Integer Data from General Purpose Register,2122
+VPBROADCASTD,Load with Broadcast Integer Data from General Purpose Register,2122
+VPBROADCASTQ,Load with Broadcast Integer Data from General Purpose Register,2122
+VPBROADCAST,Load Integer and Broadcast,2125
+VPCMPB,Compare Packed Byte Values Into Mask,2134
+VPCMPUB,Compare Packed Byte Values Into Mask,2134
+VPCMPD,Compare Packed Integer Values into Mask,2137
+VPCMPUD,Compare Packed Integer Values into Mask,2137
+VPCMPQ,Compare Packed Integer Values into Mask,2140
+VPCMPUQ,Compare Packed Integer Values into Mask,2140
+VPCMPW,Compare Packed Word Values Into Mask,2143
+VPCMPUW,Compare Packed Word Values Into Mask,2143
+VPCOMPRESSD,Store Sparse Packed Doubleword Integer Values into Dense Memory/Register,2146
+VPCOMPRESSQ,Store Sparse Packed Quadword Integer Values into Dense Memory/Register,2148
+VPCONFLICTD,Detect Conflicts Within a Vector of Packed Dword/Qword Values into Dense Memory/ Register,2150
+VPCONFLICTQ,Detect Conflicts Within a Vector of Packed Dword/Qword Values into Dense Memory/ Register,2150
+VPERM2F128,Permute Floating-Point Values,2153
+VPERM2I128,Permute Integer Values,2155
+VPERMD,Permute Packed Doublewords/Words Elements,2157
+VPERMW,Permute Packed Doublewords/Words Elements,2157
+VPERMI2W,Full Permute From Two Tables Overwriting the Index,2160
+VPERMI2D,Full Permute From Two Tables Overwriting the Index,2160
+VPERMI2Q,Full Permute From Two Tables Overwriting the Index,2160
+VPERMI2PS,Full Permute From Two Tables Overwriting the Index,2160
+VPERMI2PD,Full Permute From Two Tables Overwriting the Index,2160
+VPERMILPD,Permute In-Lane of Pairs of Double-Precision Floating-Point Values,2166
+VPERMILPS,Permute In-Lane of Quadruples of Single-Precision Floating-Point Values,2171
+VPERMPD,Permute Double-Precision Floating-Point Elements,2176
+VPERMPS,Permute Single-Precision Floating-Point Elements,2179
+VPERMQ,Qwords Element Permutation,2182
+VPEXPANDD,Load Sparse Packed Doubleword Integer Values from Dense Memory / Register,2185
+VPEXPANDQ,Load Sparse Packed Quadword Integer Values from Dense Memory / Register,2187
+VPLZCNTD,Count the Number of Leading Zero Bits for Packed Dword,Packed Qword Values,2189
+VPLZCNTQ,Count the Number of Leading Zero Bits for Packed Dword,Packed Qword Values,2189
+VPMASKMOV,Conditional SIMD Integer Packed Loads and Stores,2192
+VPMOVM2B,Convert a Mask Register to a Vector Register,2195
+VPMOVM2W,Convert a Mask Register to a Vector Register,2195
+VPMOVM2D,Convert a Mask Register to a Vector Register,2195
+VPMOVM2Q,Convert a Mask Register to a Vector Register,2195
+VPMOVB2M,Convert a Vector Register to a Mask,2198
+VPMOVW2M,Convert a Vector Register to a Mask,2198
+VPMOVD2M,Convert a Vector Register to a Mask,2198
+VPMOVQ2M,Convert a Vector Register to a Mask,2198
+VPMOVQB,Down Convert QWord to Byte,2201
+VPMOVSQB,Down Convert QWord to Byte,2201
+VPMOVUSQB,Down Convert QWord to Byte,2201
+VPMOVQW,Down Convert QWord to Word,2205
+VPMOVSQW,Down Convert QWord to Word,2205
+VPMOVUSQW,Down Convert QWord to Word,2205
+VPMOVQD,Down Convert QWord to DWord,2209
+VPMOVSQD,Down Convert QWord to DWord,2209
+VPMOVUSQD,Down Convert QWord to DWord,2209
+VPMOVDB,Down Convert DWord to Byte,2213
+VPMOVSDB,Down Convert DWord to Byte,2213
+VPMOVUSDB,Down Convert DWord to Byte,2213
+VPMOVDW,Down Convert DWord to Word,2217
+VPMOVSDW,Down Convert DWord to Word,2217
+VPMOVUSDW,Down Convert DWord to Word,2217
+VPMOVWB,Down Convert Word to Byte,2221
+VPMOVSWB,Down Convert Word to Byte,2221
+VPMOVUSWB,Down Convert Word to Byte,2221
+PROLD,Bit Rotate Left,2225
+PROLVD,Bit Rotate Left,2225
+PROLQ,Bit Rotate Left,2225
+PROLVQ,Bit Rotate Left,2225
+PRORD,Bit Rotate Right,2229
+PRORVD,Bit Rotate Right,2229
+PRORQ,Bit Rotate Right,2229
+PRORVQ,Bit Rotate Right,2229
+VPSCATTERDD,Scatter Packed Dword,Packed Qword with Signed Dword,Signed Qword Indices,2233
+VPSCATTERDQ,Scatter Packed Dword,Packed Qword with Signed Dword,Signed Qword Indices,2233
+VPSCATTERQD,Scatter Packed Dword,Packed Qword with Signed Dword,Signed Qword Indices,2233
+VPSCATTERQQ,Scatter Packed Dword,Packed Qword with Signed Dword,Signed Qword Indices,2233
+VPSLLVW,Variable Bit Shift Left Logical,2237
+VPSLLVD,Variable Bit Shift Left Logical,2237
+VPSLLVQ,Variable Bit Shift Left Logical,2237
+VPSRAVW,Variable Bit Shift Right Arithmetic,2242
+VPSRAVD,Variable Bit Shift Right Arithmetic,2242
+VPSRAVQ,Variable Bit Shift Right Arithmetic,2242
+VPSRLVW,Variable Bit Shift Right Logical,2247
+VPSRLVD,Variable Bit Shift Right Logical,2247
+VPSRLVQ,Variable Bit Shift Right Logical,2247
+VPTERNLOGD,Bitwise Ternary Logic,2252
+VPTERNLOGQ,Bitwise Ternary Logic,2252
+VPTESTMB,Logical AND and Set Mask,2255
+VPTESTMW,Logical AND and Set Mask,2255
+VPTESTMD,Logical AND and Set Mask,2255
+VPTESTMQ,Logical AND and Set Mask,2255
+VPTESTNMB,Logical NAND and Set,2258
+VPTESTNMW,Logical NAND and Set,2258
+VPTESTNMD,Logical NAND and Set,2258
+VPTESTNMQ,Logical NAND and Set,2258
+VRANGEPD,Range Restriction Calculation For Packed Pairs of Float64 Values,2261
+VRANGEPS,Range Restriction Calculation For Packed Pairs of Float32 Values,2265
+VRANGESD,Range Restriction Calculation From a pair of Scalar Float64 Values,2268
+VRANGESS,Range Restriction Calculation From a Pair of Scalar Float32 Values,2271
+VRCP14PD,Compute Approximate Reciprocals of Packed Float64 Values,2274
+VRCP14SD,Compute Approximate Reciprocal of Scalar Float64 Value,2276
+VRCP14PS,Compute Approximate Reciprocals of Packed Float32 Values,2278
+VRCP14SS,Compute Approximate Reciprocal of Scalar Float32 Value,2280
+VRCP28PD,Approximation to the Reciprocal of Packed Double-Precision Floating-Point Values with Less Than 2^-28 Relative Error,2282
+VRCP28SD,Approximation to the Reciprocal of Scalar Double-Precision Floating-Point Value with Less Than 2^-28 Relative Error,2284
+VRCP28PS,Approximation to the Reciprocal of Packed Single-Precision Floating-Point Values with Less Than 2^-28 Relative Error,2286
+VRCP28SS,Approximation to the Reciprocal of Scalar Single-Precision Floating-Point Value with Less Than 2^-28 Relative Error,2288
+VREDUCEPD,Perform Reduction Transformation on Packed Float64 Values,2290
+VREDUCESD,Perform a Reduction Transformation on a Scalar Float64 Value,2293
+VREDUCEPS,Perform Reduction Transformation on Packed Float32 Values,2295
+VREDUCESS,Perform a Reduction Transformation on a Scalar Float32 Value,2297
+VRNDSCALEPD,Round Packed Float64 Values To Include A Given Number Of Fraction Bits,2299
+VRNDSCALESD,Round Scalar Float64 Value To Include A Given Number Of Fraction Bits,2302
+VRNDSCALEPS,Round Packed Float32 Values To Include A Given Number Of Fraction Bits,2304
+VRNDSCALESS,Round Scalar Float32 Value To Include A Given Number Of Fraction Bits,2307
+VRSQRT14PD,Compute Approximate Reciprocals of Square Roots of Packed Float64 Values,2309
+VRSQRT14SD,Compute Approximate Reciprocal of Square Root of Scalar Float64 Value,2311
+VRSQRT14PS,Compute Approximate Reciprocals of Square Roots of Packed Float32 Values,2313
+VRSQRT14SS,Compute Approximate Reciprocal of Square Root of Scalar Float32 Value,2315
+VRSQRT28PD,Approximation to the Reciprocal Square Root of Packed Double-Precision Floating-Point Values with Less Than 2^-28 Relative Error,2317
+VRSQRT28SD,Approximation to the Reciprocal Square Root of Scalar Double-Precision Floating-Point Value with Less Than 2^-28 Relative Error,2319
+VRSQRT28PS,Approximation to the Reciprocal Square Root of Packed Single-Precision Floating-Point Values with Less Than 2^-28 Relative Error,2321
+VRSQRT28SS,Approximation to the Reciprocal Square Root of Scalar Single-Precision Floating-Point Value with Less Than 2^-28 Relative Error,2323
+VSCALEFPD,Scale Packed Float64 Values With Float64 Values,2325
+VSCALEFSD,Scale Scalar Float64 Values With Float64 Values,2328
+VSCALEFPS,Scale Packed Float32 Values With Float32 Values,2330
+VSCALEFSS,Scale Scalar Float32 Value With Float32 Value,2332
+VSCATTERDPS,Scatter Packed Single Packed Double with Signed Dword and Qword Indices,2334
+VSCATTERDPD,Scatter Packed Single Packed Double with Signed Dword and Qword Indices,2334
+VSCATTERQPS,Scatter Packed Single Packed Double with Signed Dword and Qword Indices,2334
+VSCATTERQPD,Scatter Packed Single Packed Double with Signed Dword and Qword Indices,2334
+VSCATTERPF0DPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T0 Hint with Intent to Write,2338
+VSCATTERPF0QPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T0 Hint with Intent to Write,2338
+VSCATTERPF0DPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T0 Hint with Intent to Write,2338
+VSCATTERPF0QPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T0 Hint with Intent to Write,2338
+VSCATTERPF1DPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T1 Hint with Intent to Write,2340
+VSCATTERPF1QPS,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T1 Hint with Intent to Write,2340
+VSCATTERPF1DPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T1 Hint with Intent to Write,2340
+VSCATTERPF1QPD,Sparse Prefetch Packed SP/DP Data Values with Signed Dword, Signed Qword Indices Using T1 Hint with Intent to Write,2340
+VSHUFF32x4,Shuffle Packed Values at 128-bit Granularity,2342
+VSHUFF64x2,Shuffle Packed Values at 128-bit Granularity,2342
+VSHUFI32x4,Shuffle Packed Values at 128-bit Granularity,2342
+VSHUFI64x2,Shuffle Packed Values at 128-bit Granularity,2342
+VTESTPD,Packed Bit Test,2347
+VTESTPS,Packed Bit Test,2347
+VZEROALL,Zero All YMM Registers,2350
+VZEROUPPER,Zero Upper Bits of YMM Registers,2352
+WAIT,Wait,2354
+FWAIT,Wait,2354
+WBINVD,Write Back and Invalidate Cache,2355
+WRFSBASE,Write FS/GS Segment Base,2357
+WRGSBASE,Write FS/GS Segment Base,2357
+WRMSR,Write to Model Specific Register,2359
+WRPKRU,Write Data to User Page Key Register,2361
+XACQUIRE,Hardware Lock Elision Prefix Hints,2362
+XRELEASE,Hardware Lock Elision Prefix Hints,2362
+XABORT,Transactional Abort,2365
+XADD,Exchange and Add,2367
+XBEGIN,Transactional Begin,2369
+XCHG,Exchange Register/Memory with Register,2372
+XEND,Transactional End,2374
+XGETBV,Get Value of Extended Control Register,2376
+XLAT,Table Look-up Translation,2378
+XLATB,Table Look-up Translation,2378
+XOR,Logical Exclusive OR,2380
+XORPD,Bitwise Logical XOR of Packed Double Precision Floating-Point Values,2382
+XORPS,Bitwise Logical XOR of Packed Single Precision Floating-Point Values,2385
+XRSTOR,Restore Processor Extended States,2388
+XRSTORS,Restore Processor Extended States Supervisor,2392
+XSAVE,Save Processor Extended States,2396
+XSAVEC,Save Processor Extended States with Compaction,2399
+XSAVEOPT,Save Processor Extended States Optimized,2402
+XSAVES,Save Processor Extended States Supervisor,2405
+XSETBV,Set Extended Control Register,2408
+XTEST,Test If In Transactional Execution,2410
