@@ -92,6 +92,8 @@ def proc_manual(bv, addr):
             lookupstr = "Jcc"
         elif lookupstr=="RETN":
             lookupstr = "RET"
+        elif lookupstr.startswith("SET"):
+            lookupstr = "SETcc"
 
         # Perform lookup
         f = open(toc, "r")
