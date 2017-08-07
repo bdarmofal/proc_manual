@@ -1,7 +1,7 @@
 # proc_manual
 x86 / x64 Processor Manual for Binary Ninja
 
-Python script (proc_manual.py) assumes Windows OS and 32-bit Firefox
+Python script (proc_manual.py) assumes Windows OS and 32-bit Firefox, but can be modified to work on any platform
 
 * Install proc_manual.py to your Binary Ninja plugins folder
 * Install intel_toc.txt to "C:\opcodes\intel_toc.txt"
