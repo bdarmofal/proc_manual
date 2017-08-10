@@ -117,7 +117,8 @@ def proc_manual(bv, addr):
                 subprocess.Popen( [browser, '-url', intel_manual+result[2] ] )
             except:
                 log_error("Couldn't find info for the selected opcode!")
-        
+        else:
+            log_error("No table of contents entry for this opcode!")        
 
 # Create a plugin command so that the user can right click on an instruction and invoke the command
 PluginCommand.register_for_address("Proc Manual", "Lookup asm instruction in proc manual", proc_manual)
