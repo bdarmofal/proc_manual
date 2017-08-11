@@ -80,8 +80,10 @@ def proc_manual(bv, addr):
                 pass
             elif tokenstr=="":
                 pass
-            elif tokenstr.startswith("+") or tokenstr.startswith("-"):
-                outstr += tokenstr
+            elif tokenstr.startswith("+0x"):
+                outstr += "+0x" + tokenstr[3:].upper()
+            elif tokenstr.startswith("-0x"):
+                outstr += "-0x" + tokenstr[3:].upper()
             elif tokenstr.startswith("0x"):
                 outstr += " " + "0x" + tokenstr[2:].upper()
             else:
