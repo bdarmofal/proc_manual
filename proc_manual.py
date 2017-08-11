@@ -34,15 +34,16 @@ def proc_manual(bv, addr):
     for block in bv.get_basic_blocks_at(addr):
         func = block.function
         arch = func.arch
-        
-        if not "x86" in repr(arch):
-            log_error("Error: this plugin currently supports Intel architecture only")
-        
-        addrsize = arch.address_size
 
         # Bring up log window
         log_error("")
         log_error("")
+        
+        if not "x86" in repr(arch):
+            log_error("Error: this plugin currently supports Intel architecture only")
+            return 1
+        
+        addrsize = arch.address_size
         
         # Grab the instruction text
         tokens, length = arch.get_instruction_text(bv.read(addr, 16), addr)
