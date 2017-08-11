@@ -34,6 +34,10 @@ def proc_manual(bv, addr):
     for block in bv.get_basic_blocks_at(addr):
         func = block.function
         arch = func.arch
+        
+        if not "x86" in repr(arch):
+            log_error("Error: this plugin currently supports Intel architecture only")
+        
         addrsize = arch.address_size
 
         # Bring up log window
