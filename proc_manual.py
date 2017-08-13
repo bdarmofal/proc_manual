@@ -27,8 +27,15 @@ import struct
 import subprocess
 
 browser = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"
-toc = "C:\opcodes\intel_toc.txt"
+
+intel_toc = "C:\\opcodes\\intel_toc.txt"
 intel_manual = "file:///C:/opcodes/intel.pdf#page="
+
+armv7_toc = "C:\\opcodes\\armv7_toc.txt"
+armv7_manual = "file:///C:/opcodes/armv7.pdf#page="
+
+arm_procs = ["armv4", "armv5", "armv6", "armv7"]
+defined_bs = ["BFC", "BFI", "BIC", "BKPT", "BL", "BLX", "BX", "BXJ"]
 
 def proc_manual(bv, addr):
     for block in bv.get_basic_blocks_at(addr):
@@ -39,8 +46,19 @@ def proc_manual(bv, addr):
         log_error("")
         log_error("")
         
-        if not "x86" in repr(arch):
-            log_error("Error: this plugin currently supports Intel architecture only")
+        if "x86" in repr(arch):
+            toc = intel_toc
+            manual = intel_manual
+            print_opcode_backwards = False
+
+        elif any(proc in repr(arch) for proc in arm_procs):
+            toc = armv7_toc
+            manual = armv7_manual
+            print_opcode_backwards = True
+            
+        else:
+            log_error(repr(arch))        
+            log_error("Error: unsupported architecture")
             return 1
         
         addrsize = arch.address_size
@@ -90,17 +108,34 @@ def proc_manual(bv, addr):
                 outstr += " " + tokenstr.upper()
                 
             tokencount += 1            
+            
+        # Reverse opcode bytes if necessary
+        if (print_opcode_backwards):
+            temp = opcodestr.split(" ")
+            opcodestr = ""
+            
+            i = len(temp)-1
+            while (i>=0):
+                opcodestr += temp[i] + " "
+                i -= 1
+                
+            opcodestr = opcodestr.lstrip()
 
         # Print original asm line            
         print opcodestr + "=> " + outstr[1:]
+
+        # Normalize menumonics
+        if "x86" in repr(arch):        
+            if lookupstr.startswith("J") and lookupstr!="JMP":
+                lookupstr = "Jcc"
+            elif lookupstr=="RETN":
+                lookupstr = "RET"
+            elif lookupstr.startswith("SET"):
+                lookupstr = "SETcc"
                 
-        # Normalize menumonic
-        if lookupstr.startswith("J") and lookupstr!="JMP":
-            lookupstr = "Jcc"
-        elif lookupstr=="RETN":
-            lookupstr = "RET"
-        elif lookupstr.startswith("SET"):
-            lookupstr = "SETcc"
+        elif "arm" in repr(arch):        
+            if lookupstr.startswith("B") and not any(menumonic in lookupstr for menumonic in defined_bs):
+                lookupstr = "B"
 
         # Perform lookup
         f = open(toc, "r")
@@ -121,7 +156,7 @@ def proc_manual(bv, addr):
                 print result[0] + " = " + result[1]
                 
                 # Open Intel proc manual to page for selected opcode
-                subprocess.Popen( [browser, '-url', intel_manual+result[2] ] )
+                subprocess.Popen( [browser, '-url', manual+result[2] ] )
             except:
                 log_error("Couldn't find info for the selected opcode!")
         else:

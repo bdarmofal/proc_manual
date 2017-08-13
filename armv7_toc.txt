@@ -1,0 +1,361 @@
+opcode toc
+
+ADC,Add with Carry,300
+ADD,ADD,308
+AND,AND,324
+ASR,ASR,330
+ASR.S,ASR,330
+B,Branch,334
+BFC,Bit Field Clear,336
+BFI,Bit Field Insert,338
+BIC,Bitwise Bit Clear,340
+BKPT,Breakpoint,346
+BL,Branch with Link,348
+BLX,Branch with Link and Exchange,348
+BX,Branch and Exchange,352
+BXJ,Branch and Exchange Jazelle,354
+CBNZ,Compare and Branch on Nonzero,356
+CBZ,Compare and Branch on Zero,356
+CDP,Coprocessor Data Processing,358
+CDP2,Coprocessor Data Processing,358
+CLREX,Clear-Exclusive,360
+CLZ,Count Leading Zeros,362
+CMN,Compare Negative,364
+CMP,Compare,370
+CPY,Copy,376
+DBG,Debug Hint,377
+DMB,Data Memory Barrier,378
+DSB,Data Synchronization Barrier,380
+EOR,Bitwise Exclusive OR,382
+ERET,Exception Return,1980
+HVC,Hypervisor Call,1982
+ISB,Instruction Synchronization Barrier,389
+IT,If-Then,390
+LDC,Load Coprocessor,392
+LDC2,Load Coprocessor,392
+LDM,Load Multiple,398
+LDMIA,Load Multiple Increment After,398
+LDMFD,Load Multiple Full Descending,398
+LDMDA,Load Multiple Decrement After,400
+LDMFA,Load Multiple Full Ascending,400
+LDMDB,Load Multiple Decrement Before,402
+LDMEA,Load Multiple Empty Ascending,402
+LDMIB,Load Multiple Increment Before,404
+LDMED,Load Multiple Empty Descending,404
+LDR,Load Register,408
+LDRB,Load Register Byte,418
+LDRBT,Load Register Byte Unprivileged,424
+LDRD,Load Register Dual,426
+LDREX,Load Register Exclusive,432
+LDREXB,Load Register Exclusive Byte,434
+LDREXD,Load Register Exclusive Doubleword,436
+LDREXH,Load Register Exclusive Halfword,438
+LDRH,Load Register Halfword,442
+LDRHT,Load Register Halfword Unprivileged,448
+LDRSB,Load Register Signed Byte,450
+LDRSBT,Load Register Signed Byte Unprivileged,456
+LDRSH,Load Register Signed Halfword,458
+LDRSHT,Load Register Signed Halfword Unprivileged,464
+LDRT,Load Register Unprivileged,466
+LSL,Logical Shift Left,468
+LSR,Logical Shift Right,472
+MCR,Move to Coprocessor from one ARM core register,476
+MCR2,Move to Coprocessor from one ARM core register,476
+MCRR,Move to Coprocessor from two ARM core registers,478
+MCRR2,Move to Coprocessor from two ARM core registers,478
+MLA,Multiply Accumulate,480
+MLS,Multiply and Subtract,482
+MOV,Move,484
+MOVT,Move Top,491
+MRC,Move to one ARM core register from Coprocessor,492
+MRC2,Move to one ARM core register from Coprocessor,492
+MRRC,Move to two ARM core registers from Coprocessor,494
+MRRC2,Move to two ARM core registers from Coprocessor,494
+MRS,Move to Register from Special register,496
+MSR,Move to Special register,498
+MUL,Multiply,502
+MVN,Bitwise NOT,504
+NEG,Negate,510
+NOP,No Operation,510
+ORN,Bitwise OR NOT,512
+ORR,Bitwise OR,516
+PKH,Pack Halfword,522
+PLD,Preload Data,524
+PLDW,Preload Data,524
+PLI,Preload Instruction,530
+POP,Pop Multiple Registers,536
+PUSH,Push Multiple Registers,538
+QADD,Saturating Add,540
+QADD16,Saturating Add 16,542
+QADD8,Saturating Add 8,544
+QASX,Saturating Add and Subtract with Exchange,546
+QDADD,Saturating Double and Add,548
+QDSUB,Saturating Double and Subtract,550
+QSAX,Saturating Subtract and Add with Exchange,552
+QSUB,Saturating Subtract,554
+QSUB16,Saturating Subtract 16,556
+QSUB8,Saturating Subtract 8,558
+RBIT,Reverse Bits,560
+REV,Byte-Reverse Word,562
+REV16,Byte-Reverse Packed Halfword,564
+REVSH,Byte-Reverse Signed Halfword,566
+RFE,Return From Exception,568
+ROR,Rotate Right,568
+RRX,Rotate Right with Extend,572
+RSB,Reverse Subtract,574
+RSC,Reverse Subtract with Carry,580
+SADD16,Signed Add 16,586
+SADD8,Signed Add 8,588
+SASX,Signed Add and Subtract with Exchange,590
+SBC,Subtract with Carry,592
+SBFX,Signed Bit Field Extract,598
+SDIV,Signed Divide,600
+SEL,Select Bytes,602
+SETEND,Set Endianness,604
+SEV,Send Event,606
+SHADD16,Signed Halving Add 16,608
+SHADD8,Signed Halving Add 8,610
+SHASX,Signed Halving Add and Subtract with Exchange,612
+SHSAX,Signed Halving Subtract and Add with Exchange,614
+SHSUB16,Signed Halving Subtract 16,616
+SHSUB8,Signed Halving Subtract 8,618
+SMC,Secure Monitor Call,620
+SMLABB,Signed Multiply Accumulate,620
+SMLABT,Signed Multiply Accumulate,620
+SMLATB,Signed Multiply Accumulate,620
+SMLATT,Signed Multiply Accumulate,620
+SMLAD,Signed Multiply Accumulate Dual,622
+SMLAL,Signed Multiply Accumulate Long,624
+SMLALBB,Signed Multiply Accumulate Long,626
+SMLALBT,Signed Multiply Accumulate Long,626
+SMLALTB,Signed Multiply Accumulate Long,626
+SMLALTT,Signed Multiply Accumulate Long,626
+SMLALD,Signed Multiply Accumulate Long Dual,628
+SMLAWB,Signed Multiply Accumulate,630
+SMLAWT,Signed Multiply Accumulate,630
+SMLSD,Signed Multiply Subtract Dual,632
+SMLSLD,Signed Multiply Subtract Long Dual,634
+SMMLA,Signed Most Significant Word Multiply Accumulate,636
+SMMLS,Signed Most Significant Word Multiply Subtract,638
+SMMUL,Signed Most Significant Word Multiply,640
+SMUAD,Signed Dual Multiply Add,642
+SMULBB,Signed Multiply,644
+SMULBT,Signed Multiply,644
+SMULTB,Signed Multiply,644
+SMULTT,Signed Multiply,644
+SMULL,Signed Multiply Long,646
+SMULWB,Signed Multiply,648
+SMULWT,Signed Multiply,648
+SMUSD,Signed Multiply Subtract Dual,650
+SRS,Store Return State,652
+SSAT,Signed Saturate,652
+SSAT16,Signed Saturate 16,654
+SSAX,Signed Subtract and Add with Exchange,656
+SSUB16,Signed Subtract 16,658
+SSUB8,Signed Subtract 8,660
+STC,Store Coprocessor,662
+STC2,Store Coprocessor,662
+STM,Store Multiple,664
+STMIA,Store Multiple Increment After,664
+STMEA,Store Multiple Empty Ascending,664
+STMDA,Store Multiple Decrement After,666
+STMED,Store Multiple Empty Descending,666
+STMDB,Store Multiple Decrement Before,668
+STMFD,Store Multiple Full Descending,668
+STMIB,Store Multiple Increment Before,670
+STMFA,Store Multiple Full Ascending,670
+STR,Store Register,674
+STRB,Store Register Byte,680
+STRBT,Store Register Byte Unprivileged,684
+STRD,Store Register Dual,686
+STREX,Store Register Exclusive,690
+STREXB,Store Register Exclusive Byte,692
+STREXD,Store Register Exclusive Doubleword,694
+STREXH,Store Register Exclusive Halfword,696
+STRH,Store Register Halfword,700
+STRHT,Store Register Halfword Unprivileged,704
+STRT,Store Register Unprivileged,706
+SUB,Subtract,710
+SVC,Supervisor Call,720
+SWI,Supervisor Call,720
+SWP,Swap,722
+SWPB,Swap,722
+SXTAB,Signed Extend and Add Byte,724
+SXTAB16,Signed Extend and Add Byte 16,726
+SXTAH,Signed Extend and Add Halfword,728
+SXTB,Signed Extend Byte,730
+SXTB16,Signed Extend Byte 16,732
+SXTH,Signed Extend Halfword,734
+TBB,Table Branch Byte,736
+TBH,Table Branch Byte,736
+TEQ,Test Equivalence,738
+TST,Test,744
+UADD16,Unsigned Add 16,750
+UADD8,Unsigned Add 8,752
+UASX,Unsigned Add and Subtract with Exchange,754
+UBFX,Unsigned Bit Field Extract,756
+UDF,Permanently Undefined,758
+UDIV,Unsigned Divide,760
+UHADD16,Unsigned Halving Add 16,762
+UHADD8,Unsigned Halving Add 8,764
+UHASX,Unsigned Halving Add and Subtract with Exchange,766
+UHSAX,Unsigned Halving Subtract and Add with Exchange,768
+UHSUB16,Unsigned Halving Subtract 16,770
+UHSUB8,Unsigned Halving Subtract 8,772
+UMAAL,Unsigned Multiply Accumulate Accumulate Long,774
+UMLAL,Unsigned Multiply Accumulate Long,776
+UMULL,Unsigned Multiply Long,778
+UQADD16,Unsigned Saturating Add 16,780
+UQADD8,Unsigned Saturating Add 8,782
+UQASX,Unsigned Saturating Add and Subtract with Exchange,784
+UQSAX,Unsigned Saturating Subtract and Add with Exchange,786
+UQSUB16,Unsigned Saturating Subtract 16,788
+UQSUB8,Unsigned Saturating Subtract 8,790
+USAD8,Unsigned Sum of Absolute Differences,792
+USADA8,Unsigned Sum of Absolute Differences and Accumulate,794
+USAT,Unsigned Saturate,796
+USAT16,Unsigned Saturate 16,798
+USAX,Unsigned Subtract and Add with Exchange,800
+USUB16,Unsigned Subtract 16,802
+USUB8,Unsigned Subtract 8,804
+UXTAB,Unsigned Extend and Add Byte,806
+UXTAB16,Unsigned Extend and Add Byte 16,808
+UXTAH,Unsigned Extend and Add Halfword,810
+UXTB,Unsigned Extend Byte,812
+UXTB16,Unsigned Extend Byte 16,814
+UXTH,Unsigned Extend Halfword,816
+VABA,Vector Absolute Difference and Accumulate,818
+VABAL,Vector Absolute Difference and Accumulate Long,818
+VABD,Vector Absolute Difference,820
+VABDL,Vector Absolute Difference Long,820
+VABS,Vector Absolute,824
+VACGE,Vector Absolute Compare Greater Than or Equal,826
+VACGT,Vector Absolute Compare Greater Than,826
+VACLE,Vector Absolute Compare Less Than or Equal,826
+VACLT,Vector Absolute Compare Less Than,826
+VADD,Vector Add,828
+VADDHN,Vector Add and Narrow,832
+VADDL,Vector Add Long,834
+VADDW,Vector Add Wide,834
+VAND,Vector Bitwise Bit And,836
+VBIC,Vector Bitwise Bit Clear,838
+VBIF,Vector Bitwise Insert If False,842
+VBIT,Vector Bitwise Insert If True,842
+VBSL,Vector Bitwise Select,842
+VCEQ,Vector Compare Equal,844
+VCGE,Vector Compare Greater Than or Equal,848
+VCGT,Vector Compare Greater Than,852
+VCLE,Vector Compare Less Than or Equal to Zero,856
+VCLS,Vector Count Leading Sign Bits,858
+VCLT,Vector Compare Less Than Zero,860
+VCLZ,Vector Count Leading Zeros,862
+VCMP,Vector Compare,864
+VCMPE,Vector Compare if Equal,864
+VCNT,Vector Count,866
+VCVT,Vector Convert Between Floating-Point and 32-bit Integer,870
+VCVTR,Vector Convert Between Floating-Point and 32-bit Integer with Rounding,870
+VCVTB,Vector Convert Bottom,880
+VCVTT,Vector Convert Top,880
+VDIV,Divide Floating-Point Values,882
+VDUP,Vector Duplicate,884
+VEOR,Vector Bitwise Exclusive OR,888
+VEXT,Vector Extract,890
+VFMA,Vector Fused Multiply Accumulate,892
+VFMS,Vector Fused Multiply Subtract,892
+VFNMA,Vector Fused Negate Multiply Accumulate,894
+VFNMS,Vector Fused Negate Multiply Subtract,894
+VHADD,Vector Halving Add,896
+VHSUB,Vector Halving Subtract,896
+VLD1,Loads Elements from Memory,898
+VLD2,Load 2-Element Structures from Memory,904
+VLD3,Load 3-Element Structures from Memory,910
+VLD4,Load 4-Element Structures from Memory,916
+VLDM,Vector Load Multiple,922
+VLDR,Load Single Extension Register from Memory,924
+VMAX,Vector Maximum,926
+VMIN,Vector Minimum,926
+VMLA,Vector Multiply Accumulate,930
+VMLAL,Vector Multiply Accumulate Long,930
+VMLS,Vector Multiply Subtract,930
+VMLSL,Vector Multiply Subtract Long,930
+VMOV,Copy Contents of Register to Another Register,938
+VMOVL,Vector Move Long,950
+VMOVN,Vector Move and Narrow,952
+VMRS,Move to ARM core register from System Register,954
+VMSR,Move to System Register from ARM core register,956
+VMUL,Vector Multiply,958
+VMULL,Vector Multiply,958
+VMVN,Vector Bitwise NOT,964
+VNEG,Vector Negate,968
+VNMLA,Multiply Two Floating-Point Register Values,970
+VNMLS,Multiply Two Floating-Point Register Values,970
+VNMUL,Multiply Two Floating-Point Register Values,970
+VORN,Bitwise OR NOT Between Two Registers,972
+VORR,Bitwise OR Between Two Registers,976
+VPADAL,Vector Pairwise Add and Accumulate Long,978
+VPADD,Vector Pairwise Add,980
+VPADDL,Vector Pairwise Add Long,984
+VPMAX,Vector Pairwise Maximum,986
+VPMIN,Vector Pairwise Minimum,986
+VPOP,Vector Pop,990
+VPUSH,Vector Push,992
+VQABS,Vector Saturating Absolute,994
+VQADD,Vector Saturating Add,996
+VQDMLAL,Vector Saturating Doubling Multiply Accumulate Long,998
+VQDMLSL,Vector Saturating Doubling Multiply Subtract Long,998
+VQDMULH,Vector Saturating Doubling Multiply Returning High Half,1000
+VQDMULL,Vector Saturating Doubling Multiply Long,1002
+VQMOVN,Vector Saturating Move and Narrow,1004
+VQMOVUN,Vector Saturating Move and Narrow,1004
+VQNEG,Vector Saturating Negate,1006
+VQRDMULH,Vector Saturating Rounding Doubling Multiply Returning High Half,1008
+VQRSHL,Vector Saturating Rounding Shift Left,1010
+VQRSHRN,Vector Saturating Rounding Shift Right Narrow,1012
+VQRSHRUN,Vector Saturating Rounding Shift Right Narrow,1012
+VQSHL,Vector Saturating Shift Left,1016
+VQSHLU,Vector Saturating Shift Left,1016
+VQSHRN,Vector Saturating Shift Right Narrow,1018
+VQSHRUN,Vector Saturating Shift Right Narrow,1018
+VQSUB,Vector Saturating Subtract,1020
+VRADDHN,Vector Rounding Add and Narrow,1022
+VRECPE,Vector Reciprocal Estimate,1024
+VRECPS,Vector Reciprocal Step,1026
+VREV16,Vector Reverse in Halfwords,1028
+VREV32,Vector Reverse in Words,1028
+VREV64,Vector Reverse in Doublewords,1028
+VRHADD,Vector Rounding Halving Add,1030
+VRSHL,Vector Rounding Shift Left,1032
+VRSHR,Vector Rounding Shift Right,1034
+VRSHRN,Vector Rounding Shift Right and Narrow,1036
+VRSQRTE,Vector Reciprocal Square Root Estimate,1038
+VRSQRTS,Vector Reciprocal Square Root Step,1040
+VRSRA,Vector Rounding Shift Right and Accumulate,1042
+VRSUBHN,Vector Rounding Subtract and Narrow,1044
+VSHL,Vector Shift Left,1046
+VSHLL,Vector Shift Left Long,1050
+VSHR,Vector Shift Right,1052
+VSHRN,Vector Shift Right Narrow,1054
+VSLI,Vector Shift Left and Insert,1056
+VSQRT,Vector Square Root,1058
+VSRA,Vector Shift Right and Accumulate,1060
+VSRI,Vector Shift Right and Insert,1062
+VST1,Vector Store,1064
+VST2,Vector Store 2-Element Structures,1068
+VST3,Vector Store 3-Element Structures,1072
+VST4,Vector Store 4-Element Structures,1076
+VSTM,Vector Store Multiple,1080
+VSTR,Store a Single Extension Register to Memory,1082
+VSUB,Vector Subtract,1084
+VSUBHN,Vector Subtract and Narrow,1088
+VSUBL,Vector Subtract Long,1090
+VSUBW,Vector Subtract Wide,1090
+VSWP,Vector Swap,1092
+VTBL,Vector Table Lookup,1094
+VTBX,Vector Table Extension,1094
+VTRN,Vector Transpose,1096
+VTST,Vector Test Bits,1098
+VUZP,Vector Unzip,1100
+VZIP,Vector Zip,1102
+WFE,Wait For Event,1104
+WFI,Wait For Interrupt,1106
+YIELD,Yield,1108
