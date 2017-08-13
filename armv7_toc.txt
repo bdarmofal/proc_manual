@@ -3,8 +3,8 @@ opcode toc
 ADC,Add with Carry,300
 ADD,ADD,308
 AND,AND,324
-ASR,ASR,330
-ASR.S,ASR,330
+ASR,Arithmetic Shift Right,330
+ASR.S,Arithmetic Shift Right,330
 B,Branch,334
 BFC,Bit Field Clear,336
 BFI,Bit Field Insert,338
