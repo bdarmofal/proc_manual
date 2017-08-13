@@ -11,5 +11,5 @@ Python script (proc_manual.py) assumes Windows OS and 32-bit Firefox, but can be
 * Install intel_toc.txt to "C:\opcodes\intel_toc.txt"
 
 #
-Make sure PDF preview is turned on in Firefox under Options->Applications->PDF
-Right-click a line of disassembly in Binary Ninja to look up the opcode definition in the Intel processor manual
+* Make sure PDF preview is turned on in Firefox under Options->Applications->PDF
+* Right-click a line of disassembly in Binary Ninja to look up the opcode definition in the Intel processor manual
